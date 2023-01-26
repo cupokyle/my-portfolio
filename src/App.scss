@@ -36,7 +36,12 @@ body {
   text-align: center;
   font-size: 2em;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   text-decoration: none;
+  background-color: rgb(209, 209, 209);
+  color: black;
 }
 
 .projectItem:hover {
@@ -45,7 +50,7 @@ background-color: slategray;
 }
 
 .projectImage {
-  height: 80%;
+  width: 100%;
 }
 
 .projectTitle {
@@ -73,7 +78,7 @@ background-color: slategray;
   }
   .projectItem {
     width: 80%;
-    margin: 2em;
+    margin: 1em;
     text-align: center;
     font-size: 2em;
     cursor: pointer;

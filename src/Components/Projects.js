@@ -16,7 +16,7 @@ export default function Projects() {
             <img alt="image2" src={image2} className="projectImage"/>
             <p className="projectTitle">What Now?</p>
         </a>
-        <a href="https://www.sulitforsyth.ca" className="projectItem">
+        <a href="https://www.lego.com" className="projectItem">
             <img alt="image3" src={image3} className="projectImage"/>
             <p className="projectTitle">Wedding Website</p>
         </a>
