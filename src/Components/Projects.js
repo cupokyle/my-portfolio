@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.scss';
 import React from "react";
 
 const image1 = require("../localimages/fakesite1.png");

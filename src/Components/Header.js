@@ -1,4 +1,4 @@
-import '../App.css';
+import '../App.scss';
 import React from "react";
 
 const appIcon1 = require("../localimages/icon1.png");
@@ -10,7 +10,7 @@ export default function Header() {
         <div className="wordSideBox">
             I'm just a little guy
         </div>
-        <div className="portfolioTitle headerItem">Kyle Forsyth's Portfolio</div>
+        <div className="portfolioTitle headerItem"><span id="kyleForsythPort">Kyle Forsyth's Portf</span><span id="aglio">olio</span></div>
         <div className="headerSideBox">
             <a href="www.lego.com"><img src={appIcon1} alt="appIcon" width="40em"/></a>
             <a href="www.lego.com"><img src={appIcon2} alt="appIcon" width="40em"/></a>

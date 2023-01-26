@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Header from './Components/Header.js';
 import Projects from './Components/Projects.js';
 import Hiring from './Components/Hiring.js';
