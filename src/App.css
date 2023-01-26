@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+body {
+  background-color: rgb(255, 255, 255);
+  font-family: 'Delius', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.portfolioTitle {
+  padding: 0.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
+  width: 100%;
+  margin-top: 10vh;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
   display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 4em;
 }
 
-.App-link {
-  color: #61dafb;
+.projectBox {
+  border: 2px solid black;
+  margin: 4em;
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.projectItem {
+  width: 28%;
+  height: 250px;
+  margin: 2em;
+  text-align: center;
+  font-size: 2em;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.projectItem:hover {
+box-shadow: black 2px 2px;
+background-color: slategray;
+}
+
+.projectImage {
+  height: 80%;
+}
+
+.projectTitle {
+  margin: 0;
+}
+
+.wordSideBox {
+  font-size: 20px;
+}
+
+.headerSideBox a {
+  margin: 5px;
+}
+
+.headerSideBox a:hover {
+  text-shadow: 2px 2px #ff0000;
 }
