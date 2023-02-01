@@ -1,4 +1,6 @@
 import './App.scss';
+import './fonts/LarkenDEMO-Medium.otf';
+import './fonts/Guminert.ttf';
 import Header from './Components/Header.js';
 import Projects from './Components/Projects.js';
 import Hiring from './Components/Hiring.js';
