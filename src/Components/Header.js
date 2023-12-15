@@ -29,7 +29,7 @@ export default function Header() {
     }, [menuRef]);
 
     return <section className="hero">
-        <a href="https://www.canva.com/design/DAEp1s9oo9Y/HFXea3SIFXUDYGMGLmZRsA/view" className="wordSideBox" id="resume" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.canva.com/design/DAFkWGPTl9A/K56vHT6ETAgXeyzMa2e-fA/view?utm_content=DAFkWGPTl9A&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" className="wordSideBox" id="resume" target="_blank" rel="noopener noreferrer">
             Check out my resume
         </a>
         <div className="portfolioTitle headerItem"><span id="kyleForsythPort">Kyle Forsyth's Portfolio</span></div>
