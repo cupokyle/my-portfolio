@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Raleway&display=swap');
+
+$font-family-dancing-script: 'Jost';
+$font-family-raleway: 'Raleway', sans-serif;
 
 @font-face {
   font-family: "Medium";   /*Can be any text*/
@@ -14,12 +18,22 @@
 
 body {
   background-color: rgb(255, 255, 255);
-  font-family: 'Medium', sans-serif;
+  font-family: $font-family-raleway;
+  font-weight: 400;
+}
+
+// Example for a bold Raleway font in certain elements
+h1, h2, h3 {
+  font-family: $font-family-raleway;
+  font-weight: 700; // Bold for headings
 }
 
 .portfolioTitle {
+  font-family: $font-family-dancing-script;
   padding: 0.5em;
-  width: 40%;
+  width: auto; // Adjust as needed or use a specific width
+  margin: auto; // This centers it horizontally
+  text-align: center; // Ensure text inside is also centered
 }
 
 .hero {
@@ -28,14 +42,14 @@ body {
   border-top: solid 2px black;
   border-bottom: solid 2px black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center; // Changed to center
   align-items: center;
   font-size: 3em;
   text-align: center;
 }
 
 .projectBox {
-  border: 2px solid black;
+  // border: 2px solid black;
   padding: 1em;
   margin: 2em;
   display: flex;
@@ -54,19 +68,22 @@ body {
   flex-direction: column;
   justify-content: space-around;
   text-decoration: none;
-  // background-color: rgb(209, 209, 209);
-  border: 2px solid black;
-  color: black;
+  border: 2px solid black; // Replace with your primary color
+  color: black; // Replace with your text color
+  background-color: white; // Replace with a secondary color
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
 }
 
-.projectItem:hover {
-  box-shadow: black 2px 2px;
-  background-color: rgb(151, 165, 179);
-}
 
 .projectImage {
   width: 100%;
   max-height: 200px;
+  padding-bottom: 20px;
 }
 
 .projectTitle {
@@ -78,11 +95,18 @@ body {
   font-size: 20px;
   text-decoration: none;
   color: black;
+  margin-left: 20px;
 }
 
 #resume:hover {
   text-shadow: 1px 1px #ff0000;
   animation: bounce 0.8s infinite alternate;
+}
+
+.headerSideBox {
+  display: flex; // Default display for larger screens
+  margin-right: 20px;
+  // ... other styles ...
 }
 
 .headerSideBox a {
@@ -93,12 +117,12 @@ body {
   animation: bounce 0.8s infinite alternate;
 }
 
-#aglio:hover {
-  text-shadow: 2px 2px #ff0000;
-}
-
 .resumeBox {
   text-align: center;
+}
+
+.burger-menu {
+  display: none; // Hide burger menu by default
 }
 
 @keyframes bounce {
@@ -118,30 +142,76 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4em;
+    padding: 1em;
   }
 
   .projectItem {
-    width: 80%;
-    margin: 1em;
-    height: 30vh;
-    text-align: center;
-    font-size: 2em;
+    width: 80%; // Adjust the width as needed
+    height: auto; // Height is auto to maintain aspect ratio
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Align items for symmetry
+  }
+
+  .projectImage {
+    width: 100%; // Full width of the project item
+    height: auto; // Maintain aspect ratio
+    object-fit: cover; // This will crop the image to fill the area, maintaining aspect ratio
+    padding-bottom: 20px;
+  }
+
+  .projectTitle {
+    // Add any additional styles for titles on mobile here
+  }
+}
+
+@media (max-width: 700px) {
+  .wordSideBox {
+    display: none;
+  }
+  .burger-menu {
+    display: block; // Show burger menu on smaller screens
     cursor: pointer;
-    text-decoration: none;
+    margin-right: 20px;
+    // Style the burger bars here
+    .bar {
+      width: 25px; // Width of the bar
+      height: 3px; // Height of the bar
+      background-color: #333; // Color of the bar
+      margin: 4px 0; // Space between bars
+      transition: all 0.3s ease;
+    }
   }
 
-  .wordSideBox,
   .headerSideBox {
-    visibility: hidden;
-    width: 0;
+    display: none; // Hide normal menu on smaller screens
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    z-index: 10;
   }
 
-  .hero {
-    margin-top: 5vh;
+  // Display the menu when it's open
+  .isMenuOpen {
+    display: flex; 
+    flex-direction: column;
+    .headerSideBox {
+      display: block; // or 'flex', depending on your layout
+    }
   }
 
-  .portfolioTitle {
-    font-size: 0.75em;
+  // Transform burger menu into a cross when open
+  .burger-menu-open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger-menu-open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu-open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
